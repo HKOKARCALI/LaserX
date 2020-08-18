@@ -110,10 +110,20 @@ public class GameFlowManager : MonoBehaviour
          if(PlayerPrefs.GetInt("Weapon") == 0)
         {
 
-            FindObjectOfType<PlayerWeaponsManager>().startingWeapons[0] = Weapon1;
-            FindObjectOfType<PlayerWeaponsManager>().AddWeapon(Weapon1);
-            FindObjectOfType<PlayerWeaponsManager>().SwitchWeapon(true);
-            FindObjectOfType<PlayerWeaponsManager>().m_WeaponSwitchState = PlayerWeaponsManager.WeaponSwitchState.PutDownPrevious;
+            try
+            {
+                FindObjectOfType<PlayerWeaponsManager>().startingWeapons[0] = Weapon1;
+                FindObjectOfType<PlayerWeaponsManager>().AddWeapon(Weapon1);
+                FindObjectOfType<PlayerWeaponsManager>().SwitchWeapon(true);
+                FindObjectOfType<PlayerWeaponsManager>().m_WeaponSwitchState = PlayerWeaponsManager.WeaponSwitchState.PutDownPrevious;
+            }
+            catch (System.Exception)
+            {
+
+                
+            }
+
+            
 
 
 
@@ -121,18 +131,40 @@ public class GameFlowManager : MonoBehaviour
 
         if (PlayerPrefs.GetInt("Weapon") == 1)
         {
-            FindObjectOfType<PlayerWeaponsManager>().startingWeapons[0] = Weapon2;
-            FindObjectOfType<PlayerWeaponsManager>().AddWeapon(Weapon2);
-            FindObjectOfType<PlayerWeaponsManager>().GetActiveWeapon();
-            FindObjectOfType<PlayerWeaponsManager>().m_WeaponSwitchState = PlayerWeaponsManager.WeaponSwitchState.PutDownPrevious;
+
+            try
+            {
+                FindObjectOfType<PlayerWeaponsManager>().startingWeapons[0] = Weapon2;
+                FindObjectOfType<PlayerWeaponsManager>().AddWeapon(Weapon2);
+                FindObjectOfType<PlayerWeaponsManager>().GetActiveWeapon();
+                FindObjectOfType<PlayerWeaponsManager>().m_WeaponSwitchState = PlayerWeaponsManager.WeaponSwitchState.PutDownPrevious;
+            }
+            catch (System.Exception)
+            {
+
+
+            }
+
+           
         }
 
         if (PlayerPrefs.GetInt("Weapon") == 2)
         {
-            FindObjectOfType<PlayerWeaponsManager>().startingWeapons[0] = Weapon3;
-            FindObjectOfType<PlayerWeaponsManager>().AddWeapon(Weapon3);
-            FindObjectOfType<PlayerWeaponsManager>().GetActiveWeapon();
-            FindObjectOfType<PlayerWeaponsManager>().m_WeaponSwitchState = PlayerWeaponsManager.WeaponSwitchState.PutDownPrevious;
+
+            try
+            {
+                FindObjectOfType<PlayerWeaponsManager>().startingWeapons[0] = Weapon3;
+                FindObjectOfType<PlayerWeaponsManager>().AddWeapon(Weapon3);
+                FindObjectOfType<PlayerWeaponsManager>().GetActiveWeapon();
+                FindObjectOfType<PlayerWeaponsManager>().m_WeaponSwitchState = PlayerWeaponsManager.WeaponSwitchState.PutDownPrevious;
+            }
+            catch (System.Exception)
+            {
+
+
+            }
+
+            
         }
 
 

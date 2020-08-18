@@ -23,6 +23,7 @@ public class ResultManager : MonoBehaviour
     private void Awake()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     void Start()
@@ -69,6 +70,7 @@ public class ResultManager : MonoBehaviour
     void Update()
     {
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     private void initbar()
